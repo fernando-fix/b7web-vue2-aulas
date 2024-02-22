@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>VueJS</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <!-- Ao invés de usar o v-bind, usar o : -->
+        <a v-bind:href="url">Link de acesso ao VUEJS</a>
+        <br>
+        <a :href="url">Link de acesso ao VUEJS</a>
+
+        <br><br>
+
+        <!-- Ao invés de usar o v-on, usar o @ -->
+        <button v-on:click="fazAlgumaCoisa">button</button>
+        <br>
+        <button @click="fazAlgumaCoisa">button</button>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

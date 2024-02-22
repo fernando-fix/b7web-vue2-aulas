@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>VueJS</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- V-IF -->
+        <div id="placar">
+            <h1>Placar</h1>
+            <button v-on:click="increment">Adicionar</button>
+            <button v-on:click="decrement">Diminuir</button>
+            <h2>Pontos: {{ n }}</h2>
+            <span v-if="n > 5">Parabéns você passou de 5 pontos</span>
+            <span v-else>Você não atingiu os 5 pontos ainda</span>
+        </div>
+        <!-- V-FOR -->
+        <div id="nomes">
+            <h1>Nomes</h1>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Idade</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="pessoa in pessoas">
+                        <td>{{ pessoa.nome }}</td>
+                        <td>{{ pessoa.email }}</td>
+                        <td>{{ pessoa.idade }}</td>
+                        <td><button>Editar</button><button style="color: red;">Excluir</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <msg-component></msg-component>
+        <msg-component></msg-component>
+        <msg-component></msg-component>
+        <msg-component></msg-component>
+        <msg-component></msg-component>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

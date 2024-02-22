@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Vue.js</title>
+	<meta charset="utf-8" />
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+	<div id="app">
+		<header class="header">
+
+		</header>
+		<section class="container">
+			<section class="container__content">
+
+				<div v-if="aviso">Este é um aviso</div>
+
+				<!-- Ver como fica no inspecionar -->
+				<div v-bind:id="divid">Esta é uma div qualquer</div>
+				<!-- Ver como fica no inspecionar -->
+				<a v-bind:href="link">Link de acesso ao VUEJS</a>
+
+				<div>
+					<button v-on:click="mostrar">button</button>
+				</div>
+
+				<br>
+
+				<form action="" method="post" v-on:submit.prevent="enviou">
+					<!-- input para nome -->
+					<div>
+						<label for="nome">Nome:</label>
+						<input type="text" name="name" id="name">
+					</div>
+					<div>
+						<label for="email">E-mail:</label>
+						<input type="email" name="email" id="email">
+					</div>
+					<div>
+						<button>Enviar</button>
+					</div>
+				</form>
+
+			</section>
+			<aside class="container__sidebar">
+
+			</aside>
+		</section>
+		<footer class="footer">
+
+		</footer>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+
+</html>

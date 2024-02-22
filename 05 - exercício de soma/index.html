@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>VueJS</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Adivinhe a soma:</h1>
+        <span>{{number1}} + {{ number2 }} =</span>
+        <input type="text" v-model="result">
+        <p v-if="number1 + number2 == parseInt(result)">Você acertou!</p>
+        <p v-if="result != '0' && result != '' && number1 + number2 != parseInt(result)">Você errou!</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
