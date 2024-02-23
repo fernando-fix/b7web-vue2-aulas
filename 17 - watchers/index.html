@@ -22,7 +22,19 @@
             <div id="content">
                 <!-- content -->
                 <div class="mt-3">
-                    <h1>{{ frase }}</h1>
+                    <div>
+                        <h2>Fazer conta:</h2>
+                    </div>
+                    <input type="text" v-model="conta">
+                    <div v-if="aviso != ''">
+                        <br>
+                        <span v-text="aviso"></span>
+                    </div>
+                    <div v-if="resultado != ''">
+                        <br>
+                        <span>Resultado: </span>
+                        <span v-text="resultado"></span>
+                    </div>
                 </div>
             </div>
         </div>

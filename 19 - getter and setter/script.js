@@ -1,0 +1,19 @@
+let content = new Vue({
+    el: '#content',
+    data: {
+        primeiroNome: '',
+        segundoNome: '',
+    },
+    computed: {
+        nomeCompleto: {
+            get: function () {
+                return this.primeiroNome + ' ' + this.segundoNome;
+            },
+            set: function (novoValor) {
+                let nomes = novoValor.split(' ');
+                this.primeiroNome = nomes[0];
+                this.segundoNome = nomes[1];
+            }
+        }
+    }
+})

@@ -1,6 +1,6 @@
-let app = new Vue({
-    el: '#app',
+let content = new Vue({
+    el: '#content',
     data: {
-        frase: 'olá vue',
+        frase: 'Olá vue',
     }
 })

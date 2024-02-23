@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>VueJS</title>
+</head>
+
+<body>
+    <header class="bg-body-tertiary" style="height: 50px;">
+        <div class="container-xl">
+            <div id="header">
+                <!-- header -->
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container-xl">
+            <div id="content">
+                <!-- content -->
+                <div class="mt-3">
+
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Digite um nome:</label>
+                        <div class="d-flex">
+                            <input type="text" class="form-control" id="name" name="name" style="width: 300px"
+                                v-model="fname">
+                            <button v-if="btnAdicionar" class="btn btn-success ms-2"
+                                @click="adicionar">Adicionar</button>
+                            <button v-if="digitando" class="btn btn-secondary ms-2">Digitando...</button>
+                        </div>
+                    </div>
+
+                    <table class="table table-bordered border-primary mt-5" style="max-width: 525px;"
+                        v-if="pessoas.length > 0">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th width="1px">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="pessoa in pessoas">
+                                <td>{{ pessoa.name }}</td>
+                                <td>
+                                    <button class="btn btn-sm btn-danger" @click="remover(pessoa)">Remover</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container-xl">
+            <div id="footer">
+                <!-- footer -->
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
